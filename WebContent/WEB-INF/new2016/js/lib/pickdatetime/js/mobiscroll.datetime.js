@@ -1,0 +1,1 @@
+!function($){$.each(["date","time","datetime"],function(a,b){$.mobiscroll.presetShort(b)})}(jQuery);

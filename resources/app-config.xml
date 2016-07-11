@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"  
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+       xmlns:context="http://www.springframework.org/schema/context"  
+       xmlns:aop="http://www.springframework.org/schema/aop"  
+       xsi:schemaLocation="http://www.springframework.org/schema/beans   
+          http://www.springframework.org/schema/beans/spring-beans-3.0.xsd   
+           http://www.springframework.org/schema/context   
+           http://www.springframework.org/schema/context/spring-context-3.0.xsd   
+           http://www.springframework.org/schema/aop   
+           http://www.springframework.org/schema/aop/spring-aop-3.0.xsd   
+           "> 
+
+
+	<!-- Scans within the base package of the application for @Components to configure as beans 
+	<context:component-scan base-package="com.highversion.service,com.highversion.controller,com.highversion.listener,com.lenovocw.music,com.lenovocw.utils,com.lenovocw.init" />
+	-->
+	<!-- 使用Annotation自动注册Bean，解决事物失效问题：在主容器中不扫描@Controller注解，在SpringMvc中只扫描@Controller注解。  -->
+
+	<context:component-scan base-package="com.fuli.service,com.redtemp.service,com.highversion.listener,com.lenovocw.music,com.lenovocw.utils,com.lenovocw.init"><!-- base-package 如果多个，用“,”分隔 -->
+
+		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+	</context:component-scan>
+	<context:component-scan base-package="wechatShare" />
+	<aop:aspectj-autoproxy/>
+	
+	<!-- initilize Listener start
+	<bean id="initilizeListener" class="com.highversion.listener.EhcacheInitilizeListener"/>
+	<bean id="springFactory" class="com.base.SpringFactory"/>
+	 -->
+	
+	<!-- 缓存配置 -->
+	<bean id="cacheManager" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">
+		<property name="configLocation" value="classpath:ehcache.xml" />
+	</bean>
+	<!-- Spring提供的基于的Ehcache实现的缓存管理器  
+    <bean id="cacheManagerFactory" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">  
+        <property name="configLocation" value="classpath:ehcache.xml"/>  
+    </bean>  
+    <bean id="cacheManager" class="org.springframework.cache.ehcache.EhCacheCacheManager">  
+        <property name="cacheManager" ref="cacheManagerFactory"/>  
+    </bean>  
+     -->
+</beans>

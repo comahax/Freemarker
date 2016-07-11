@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <title>访问人数过多</title>
+    <link rel="stylesheet" href="../css/normalize.css"/>
+    <link rel="stylesheet" href="../css/main.css"/>
+</head>
+<body class="mb-body error-body">
+    <div class="page-main">
+        <div class="error-wrap">
+            <img src="../images/error-tip.gif" alt=""/>
+            <!--返回链接-->
+            <a href="#">
+                <img src="../images/error-back.gif" alt=""/>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

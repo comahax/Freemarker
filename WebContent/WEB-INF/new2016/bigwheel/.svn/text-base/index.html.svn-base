@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <title>大转盘-首页</title>
+    <link rel="stylesheet" href="/fuliclient/new2016/css/normalize.css"/>
+    <link rel="stylesheet" href="/fuliclient/new2016/css/main.css"/>
+</head>
+<body class="mb-body index-body">
+    <div class="page-main" id="page-main">
+        <div class="phone-number"></div>
+        <div class="header-btn-wrap">
+            <a href="javascript:" id="myProduct" class="mine-prize-btn"><!--我的奖品-->
+                <img src="/fuliclient/new2016/images/btn-mine-prize.png" alt=""/>
+            </a>
+            <a href="javascript:" class="flow-coin-btn" id="myCoin"><!--流量币-->
+                <img src="/fuliclient/new2016/images/btn-flow-coin.png" alt=""/>
+            </a>
+        </div>
+        <!-- 大转盘 开始-->
+        <div class="dial-wrap">
+            <div class="dial-main" id="dial-main">
+                <img class="dial-main-img" src="/fuliclient/new2016/images/dial-bg.png" alt=""/>
+                <div class="dial-inner" id="dial-inner">
+                    <!--分享增加机会 开始-->
+                    <div class="share-qrcode">
+                        <div class="plus-times">让好友扫码 增加抽奖次数</div>
+                        <div class="qrcode-wrap">
+                            <img src="/fuliclient/new2016/images/tmp-qrcode.jpg" alt=""/>
+                        </div>
+                        <div class="share-tips">
+                           <!--  <img src="/fuliclient/new2016/images/qrcode-tips.jpg" alt=""/> -->
+                        </div>
+                    </div>
+                    <!--分享增加机会 结束-->
+                    <div class="dial-table">
+                        <table cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td class="dial-item" data-dial-id="1">
+                                    <img src="/fuliclient/new2016/images/square-normal.png" alt=""/>
+                                    <div class="prize-desc">
+                                        <p class="red-num">1G</p>
+                                        <p class="color-purple">7天有效</p>
+                                    </div>
+                                </td>
+                                <td class="dial-item" data-dial-id="2">
+                                    <img src="/fuliclient/new2016/images/square-normal.png" alt=""/>
+                                    <div class="prize-desc">
+                                        <p class="red-num">宽带</p>
+                                    </div>
+                                </td>
+                                <td class="dial-item" data-dial-id="3">
+                                    <img src="/fuliclient/new2016/images/square-normal.png" alt=""/>
+                                    <div class="prize-desc">
+                                        <p class="red-num">1G</p>
+                                        <p class="color-purple">30天有效</p>
+                                    </div>
+                                </td>
+                                <td class="dial-item" data-dial-id="4">
+                                    <img src="/fuliclient/new2016/images/square-normal.png" alt=""/>
+                                    <div class="prize-desc">
+                                        <p class="color-purple only-text">还差<br>一点</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="dial-item" data-dial-id="5">
+                                    <img src="/fuliclient/new2016/images/rectangle-normal.png" alt=""/>
+                                    <div class="prize-desc">
+                                        <p class="red-num">福袋</p>
+                                    </div>
+                                </td>
+                                <td rowspan="2" colspan="2" style="vertical-align: bottom">
+                                    <!--Go 开始-->
+                                    <div class="has-draw-chance" id="has-draw-chance">
+                                        <div class="go-tips">天天大转盘</div>
+                                        <div class="img-wrap" id="btn-go">
+                                            <img src="/fuliclient/new2016/images/btn-go.png" alt=""/>
+                                            <p style="opacity:0">今天有<i id="chance-num">3</i>次机会</p>
+                                        </div>
+                                    </div>
+                                    <!--Go 结束-->
+                                </td>
+                                <td class="dial-item" data-dial-id="6">
+                                    <img src="/fuliclient/new2016/images/rectangle-normal.png" alt=""/>
+                                    <div class="prize-desc">
+                                        <p class="red-num">1G</p>
+                                        <p class="color-purple">4小时有效</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="dial-item" data-dial-id="7">
+                                    <img src="/fuliclient/new2016/images/rectangle-normal.png" alt=""/>
+                                    <div class="prize-desc">
+                                        <p class="red-num">100M</p>
+                                        <p class="color-purple">叠加包</p>
+                                    </div>
+                                </td>
+                                <td class="dial-item" data-dial-id="8">
+                                    <img src="/fuliclient/new2016/images/rectangle-normal.png" alt=""/>
+                                    <div class="prize-desc">
+                                        <p class="red-num">流量币</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="dial-item" data-dial-id="9">
+                                    <img src="/fuliclient/new2016/images/square-normal.png" alt=""/>
+                                    <div class="prize-desc">
+                                        <p class="red-num">手机</p>
+                                    </div>
+                                </td>
+                                <td class="dial-item" data-dial-id="10">
+                                    <img src="/fuliclient/new2016/images/square-normal.png" alt=""/>
+                                    <div class="prize-desc">
+                                        <p class="red-num">100M</p>
+                                        <p class="color-purple">1小时有效</p>
+                                    </div>
+                                </td>
+                                <td class="dial-item" data-dial-id="11">
+                                    <img src="/fuliclient/new2016/images/square-normal.png" alt=""/>
+                                    <div class="prize-desc">
+                                        <p class="red-num">金箔</p>
+                                    </div>
+                                </td>
+                                <td class="dial-item" data-dial-id="12">
+                                    <img src="/fuliclient/new2016/images/square-normal.png" alt=""/>
+                                    <div class="prize-desc">
+                                        <p class="red-num">300M</p>
+                                        <p class="color-purple">叠加包</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 大转盘 结束-->
+
+        <!--公告栏 开始-->
+        <div class="notify-wrap" style="opacity:0">
+            <div class="role-tb">
+                <div class="notify-title role-td width-fixed"></div>
+                <div class="notify-desc role-td width-auto">
+                    <ul id="notify-ul">
+                        <li>139xxxxxxxx获得100M 1小时有效</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--公告栏 结束-->
+
+        <!--广告栏 开始-->
+        <div class="ad-3-col">
+            <div class="img-wrap">
+                <a href="#">
+                    <img src="/fuliclient/new2016/images/index-ad1.gif" alt=""/>
+                </a>
+            </div>
+            <div class="img-wrap">
+                <a href="#">
+                    <img src="/fuliclient/new2016/images/index-ad2.gif" alt=""/>
+                </a>
+            </div>
+            <div class="img-wrap">
+                <a href="#">
+                    <img src="/fuliclient/new2016/images/index-ad3.gif" alt=""/>
+                </a>
+            </div>
+        </div>
+        <!--广告栏 结束-->
+
+        <!--底部按钮 开始-->
+        <div class="bottom-link">
+            <div class="link-left" onclick="showDesc(this,'#desc-content')">活动规则</div>
+        </div>
+        <!--底部按钮 结束-->
+    </div>
+    <!--活动规则 开始-->
+    <div class="rule-desc" id="desc-content" style="display: none">
+    	1、抽奖机会：每人每天至少有1次抽奖机会，每天抽奖时间为：10:00-22:00；每日抽奖机会不结转至次日，22:00后当日剩余的抽奖机会自动清零；
+		<br>2、奖品查看及使用：点击主页面“我的奖品”及“流量币”查看并使用奖品，或关注“珠海移动”微信，发送微信指令“大转盘”查看并使用奖品；中奖用户须关注“珠海移动”官方微信才可使用或领取奖品。
+		<br>（1）流量奖品：通过优惠券形式发放，中奖后24小时内到账；
+		<br>（2）流量币：流量币目前可兑换流量包，点击大转盘主页“流量币”或“珠海移动”官方微信发送“大转盘”获取兑换页面；
+		<br>（3）其他奖品：请留意中奖后的提示窗口或页面；
+		<br>3、奖品有效期：流量币有效期至2016年11月30日，其余奖品兑换有效期请在“我的奖品”中有显示标注，逾期失效；
+		<br>4、流量有效期：流量有效期≠奖品有效期。流量有效期从用户成功兑换流量优惠券后开始计算，不同奖品有效期从1小时到30天不等，使用前请见页面说明；
+		<br>5、流量奖品的优惠券采用先扣流量包话费，再立即返还等额话费的方式实现，请兑换流量类奖品时确保可用话费余额大于流量包费用；
+		<br>6、本活动仅限珠海移动正常使用号码参与，非正常状态号码参加活动所获奖励无效；
+		<br>7、我司可根据本活动的实际举办情况对活动规则进行变动或调整，相关变动或调整将公布在活动页面上，并于公布时即时生效；
+		<br>8、如出现不可抗力或情势变更的情况(包括但不限于重大灾害事件、活动受政府机关指令需要停止举办或调整的、活动遭受严重网络攻击或因系统故障需要暂停举办的)，本活动平台可依相关法律法规的规定主张免责。
+    </div>
+    <!--活动规则 结束-->
+    <script src="/fuliclient/new2016/js/lib/jquery/jquery.js"></script>
+    <script src="/fuliclient/new2016/js/src/common/common.js"></script>
+    <script>
+        $(function(){
+        	getPhoneKey();
+            $("#btn-go").click(function(){
+            	$.jqAlert({
+        		    title:"确定"
+        		    ,content:"<p>呀，您来的真不巧，转盘君正在休息呦！<br>转盘君每天10:00-22:00开转，下次要准时呦！</p>"
+        		    ,buttons:[{
+        		        "确定":function(){
+        		        	$.jqAlert.close();
+        		        }
+        		    }]
+        		});
+            });
+            var imgI = 0;
+            $("img:visible").each(function(i,e){
+                loadImage($(e).attr("src"),function(){
+                    imgI++;
+                    if($("img:visible").length == imgI){
+                        screenFixed("#page-main");
+                    }
+                });
+            });
+            setTimeout(function(){
+                screenFixed("#page-main");
+            },1000);
+        });
+        
+        function loadImage(url, callback) {
+            var img = new Image();
+            img.src = url;
+            if(img.complete) {
+                callback.call(img);
+                return;
+            }
+            $(img).load(function () {
+                callback.call(img);
+            });
+        }
+        function screenFixed(obj) {
+            var $obj = $(obj);
+            if ($obj.length > 0) {
+                var sH = document.body.clientHeight,
+                    pH = $obj.outerHeight(true),
+                    pSize,
+                    overH;
+                if (pH > sH) {
+                    overH = pH - sH;
+                    if (overH < 80) {
+                        pSize = 3;
+                        do {
+                            $obj.css("padding", "0 " + (parseFloat($obj.css("padding-left")) + pSize) + "px");
+                        }
+                        while (($obj.outerHeight(true) - sH > 0));
+                    }
+                }
+            }
+        }
+        
+        $.jqAlert = function(opts){
+            var _this = $.jqAlert,
+                option,
+                modal = $("<div class='alert-modal'></div>"),
+                wrap,
+                header,
+                closeBtn,
+                bottomBtn,
+                center,
+                footer;
+            _this.defaults = {
+                title:"提示",
+                content:"暂无内容~",
+                buttons:[],
+                appendTo:"body",
+                animateTime:180
+            };
+            option = $.extend($.jqAlert.defaults,opts);
+            _this._create = function(){
+                wrap = $("<div class='alert-wrap'></div>");
+                closeBtn = $("<span class='close-btn'></span>");
+                header = $("<div class='header'><span class='title'>"+ option.title +"</span></div>");
+                center = $("<div class='center'>"+ option.content +"</div>");
+                footer = $("<div class='footer'></div>");
+                closeBtn.on("click",function(){
+                    _this.close();
+                }).appendTo(header);
+                modal.empty().append(wrap.append(header).append(center));
+                if(option.buttons.length){
+                    var btns = option.buttons,
+                        arrThis;
+                    $.each(btns,function(i,e){
+                        arrThis = e;
+                        $.each(arrThis,function(j){
+                            bottomBtn = $("<div class='footer-button default-btn'>"+ j +"</div>");
+                            bottomBtn.on("click",arrThis[j]);
+                            footer.append(bottomBtn);
+                        });
+                    });
+                    wrap.append(footer);
+                }
+            };
+            _this._isShow = function(){
+                return $("body").find(".alert-modal").length > 0;
+            };
+            _this.show = function(){
+                if(_this._isShow()){
+                    $(".alert-modal").remove();
+                }
+                _this._create();
+                var _wrap = $(".alert-wrap",modal);
+                _wrap.hide();
+                modal.hide().appendTo($(option.appendTo)).stop(true).fadeIn(option.animateTime,function(){
+                    _wrap.stop(true).show(option.animateTime);
+                });
+
+            };
+            _this.close = function(){
+                if(_this._isShow()){
+                    var _modal = $(".alert-modal"),
+                        _wrap = $(".alert-wrap",_modal);
+                    _wrap.stop(true).hide(option.animateTime,function(){
+                        _modal.stop(true).fadeOut(option.animateTime,function(){
+                            _modal.remove()
+                        });
+                    });
+                }
+            };
+            _this.show();
+        };
+        function getPhoneKey(){
+    		$.ajax({
+    			url : common.getBaseUrl()+ "BigWheelIndex/getPhoneKey.do",
+    	        type: "post",
+    	        dataType: "json",
+    	        beforeSend:function(data){ 
+    	        
+    	        }, 
+    	        error:function (data){
+    	        },success: function (data) {
+    	        	var phoneKey = data.phoneKey;
+    	        	var myProducturl = "http://fuli.zhg3.com/zhuhai_cmzxt_fuli/new2015/index/mine_coupon.html?phoneKey="+phoneKey+"&qdcode=WXHBXTGL";
+    	        	var myCoinurl = "http://fuli.zhg3.com/zhuhai_cmzxt_fuli/new2015/index/flow-coin.html?phoneKey="+phoneKey+"&qdcode=WXHBXTGL";
+    	        	$("#myProduct").click(function(){
+    	        		common.G(myProducturl);
+    	    	    });
+    	        	 $("#myCoin").click(function(){
+            			common.G(myCoinurl);
+            	    });
+    	        }
+    	    });
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:context="http://www.springframework.org/schema/context" 
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.1.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<!-- Configures support for @Controllers -->
+	<mvc:annotation-driven />
+	<!-- 使用Annotation自动注册Bean,只扫描@Controller -->
+
+	<context:component-scan base-package="com.fuli.controller,com.redtemp.controller" use-default-filters="false"><!-- base-package 如果多个，用“,”分隔 -->
+
+		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+	</context:component-scan>
+    <!-- 加载配置属性文件 -->
+	<context:property-placeholder ignore-unresolvable="true" location="classpath:jdbc.properties" />
+	<!-- 连接池启动时的初始值 -->
+	<!-- 连接池的最大值 -->
+	<!-- 最大空闲值.当经过一个高峰时间后，连接池可以慢慢将已经用不到的连接慢慢释放一部分，一直减少到maxIdle为止 -->
+	<!-- 最小空闲值.当空闲的连接数少于阀值时，连接池就会预申请去一些连接，以免洪峰来时来不及申请 -->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+		destroy-method="close">
+		<property name="driverClass" value="${jdbc.driverClassName}" />
+
+		<property name="jdbcUrl" value="${jdbc.url}" />
+		<property name="user" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+	<!--
+		<property name="initialPoolSize" value="10" />
+		<property name="maxPoolSize" value="5" />
+		<property name="minPoolSize" value="1" />
+		<property name="acquireIncrement" value="5" />
+		<property name="maxIdleTime" value="7200" />
+		<property name="maxIdleTimeExcessConnections" value="2400" />
+		<property name="maxConnectionAge" value="27000" />
+		<property name="maxStatements" value="500" />
+		<property name="maxStatementsPerConnection" value="50" />
+		<property name="numHelperThreads" value="5" />
+	 <property name="automaticTestTable" value="con_test"/> <property name="checkoutTimeout" 
+			value="30000"/> <property name="idleConnectionTestPeriod" value="60"/> -->
+			
+			
+			<!--连接池初始化时的连接数 -->
+		<property name="initialPoolSize" value="10" />
+		<!--连接池的最大连接数 -->
+		<property name="maxPoolSize" value="100" />
+		<!--连接池的最小连接数 -->
+		<property name="minPoolSize" value="3" />
+		<!--获取新连接时同时新增的连接数 -->
+		<property name="acquireIncrement" value="5"/>
+		<!--连接空闲最大空闲时间s -->
+		<property name="maxIdleTime" value="1800"/>
+		<!--连接最长活动时间s -->
+		<property name="maxConnectionAge" value="27000" />
+		<!--高峰过后快速释放空闲连接一般比maxIdleTime小 -->
+		<property name="maxIdleTimeExcessConnections" value="900" />
+		<!-- 单个connection statement 缓存数 -->
+		<property name="maxStatements" value="500" />
+		<!-- 连接池为数据源单个Connection缓存的PreparedStatement数 -->
+		<property name="maxStatementsPerConnection" value="50" />
+		<!--连接池在获得新连接失败时重试的次数，如果小于等于0则无限重试直至连接获得成功 -->
+		<property name="acquireRetryAttempts" value="15"/>
+		<!-- 连接池在获得新连接时的间隔时间。default : 1000 单位ms -->
+		<property name="acquireRetryDelay" value="1000"/>
+		<!--连接等待时间ms 默认等于acquireRetryAttempts*acquireRetryDelay 
+		<property name="checkoutTimeout" value="15000"/>-->
+		<!-- 连接池根据sql语句测试空闲连接 -->
+		<property name="preferredTestQuery" value="select sysdate from dual"/>
+		<!--每60s检测所有空闲连接 -->
+		<property name="idleConnectionTestPeriod" value="60"/>
+		<!-- 缓慢的JDBC操作通过帮助进程完成。扩展这些操作可以有效的提升性能 通过多线程实现多个操作同时被执行 -->
+		<property name="numHelperThreads" value="5" />
+			
+			
+	</bean>
+
+
+
+	<!-- 采用注解方式配置事务 -->
+	<bean id="txManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<!-- 采用@Transactional注解方式使用事务 -->
+	<tx:annotation-driven transaction-manager="txManager" />
+
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<!-- 注入能力平台数据库中间 件配置中央数据持久化中间件实例 -->
+
+
+	<!-- 配置中央数据持久化中间件实例 -->
+	<bean id="jdbcDao" class="com.lenovocw.music.dao.impl.JdbcDaoImplc">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<!-- <bean id="IntegralJdbcDao" class="com.lenovocw.integral.dao.impl.IntegralJdbcDaoImpl"> 
+		<property name="dataSource" ref="dataSource" /> </bean> -->
+
+	<!-- 配置中央数据持久化中间件实例 -->
+	<bean id="beanJdbcDao" class="com.lenovocw.music.dao.impl.BeanJdbcDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="viewResolver" class="com.lenovocw.dom.UrlViewResolver">
+		<property name="viewClass"
+			value="org.springframework.web.servlet.view.JstlView" />
+		<property name="prefix" value="/new2016/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+	<mvc:default-servlet-handler />
+	<!-- 上传文件大小限制 -->
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="9999999999999" />
+	</bean>
+
+	<bean id="exceptionResolver"
+		class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+		<property name="exceptionMappings">
+			<props>
+				<prop
+					key="org.springframework.web.multipart.MaxUploadSizeExceededException">maxUploadExceeded</prop>
+			</props>
+		</property>
+	</bean>
+		<!-- 
+	<mvc:interceptors>
+		
+	
+		<mvc:interceptor>
+			<mvc:mapping path="/login/*.do" />
+			<bean class="com.highversion.interceptor.LogIterceptor" />
+		</mvc:interceptor>
+		
+	</mvc:interceptors>
+	 -->
+</beans>

@@ -1,0 +1,127 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<title>周四红包</title>
+<link href="../css/reset.css" rel="stylesheet" type="text/css" />
+<link href="../css/common.css" rel="stylesheet" type="text/css" />
+<link href="../css/index.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="body-bg">
+    <div class="main">
+    	<div class="head-logo-img"><img src="../images/logo.png" class="logo-img"></div>
+        <div class="title-img"><img src="../images/title.png"></div>
+        <div class="index-img index-img2 pr"><img src="../images/hb_bg_1.png">
+        	<div class="hb-inner-header-text pa">
+            	<div class="fem-15 inner-text">获得<span class="fem-16 red2 blod">1.2</span>元<span class="niudao" title="小试牛刀"><img src="../images/niudao.png"></span></div>
+            </div>
+            
+            <div class="hb-inner-mid-text pa">
+            	<div class="hb-mid-con">
+                	
+                	<p class="fem-12 text-center lh-12 white">文字111111</p>
+                    <div class="h1-5rem"></div>
+                    <div class="h1-5rem"></div>
+                    <div class="h1-5rem"></div>
+                    <p class="fem-12 text-center lh-12 white">文字2222</p>
+                   
+                </div>
+            </div>
+        </div>
+        <div class="h1em"></div>
+        <div class="hb-foot-btn"><a href="javascript:" id="btnGet"><img src="../images/btn_6.png" alt="立即领取"></a></div>
+        
+         <div class="h1em"></div>
+         <div class="pl-1em pr-1em white clearfix text-center">
+            <div><a href="javascript:" onClick="common.toggleDiv('#active-con');common.toggleClass($(this).parent().next().children(),'active')" class="white text-unline">活动规则</a></div>
+            <div><div class="inline-block  icon-jt2 pr  bg-cover-after">&nbsp;&nbsp;</div> </div>
+         </div>
+         <div class="h1em"></div>
+         <div class="active-gz white lh-15 pd1em" style="padding-top:0; display:none" id="active-con">
+         	1.本活动仅限珠海移动用户参与<br>
+            2.本活动仅限珠海移动用户参与本活动仅限珠海移动用户参与，本活动仅限珠海移动用户参与本活动仅限珠海移动用户参与。<br>
+			3.本活动仅限珠海移动用户参与本活动仅限珠海移动用户参与本活动仅限珠海移动用户参与！。
+         </div>
+    </div>
+    
+    
+    <div class="hide" id="tips-box-con">
+    <div class="tips-box">
+    	<div class="h1em"></div>
+        <div class="changeDiv_1">
+    	<div class="t1 fem-15 text-center">请问要领取到这个号码么？</div>
+        <div class="h2em"></div>
+        <div class="t1 fem-12 text-center">
+        	13800138000
+        </div>
+         <div class="h2em"></div>
+        <div class="text-center more-tips-btn">
+         <a href="javascript" class="tips-btn"><img src="../images/box_btn_4.png"></a>
+         <a href="javascript" class="tips-btn tipsBtnChange"><img src="../images/box_btn_5.png"></a>
+        </div>
+        </div>
+        <!--更换号码-->
+        <div class="changeDiv_2" style="display:none">
+        <div class="t1 fem-13 text-center">请输入你要领取的号码</div>
+        <div class="h1em"></div>
+            <div class="table">
+                <div class="table-cell" style="width:4em">手机号码</div>
+                <div class="table-cell"><input type="text" class="i_text"></div>
+            </div>
+            <div class="h05em"></div>
+            <div class="table">
+                <div class="table-cell" style="width:4em">验证码</div>
+                <div class="table-cell"><input type="text" class="i_text"></div>
+                <div class="table-cell"><a href="javascript:" class="get-code">获取</a></div>
+            </div>
+            <div class="h1em"></div>
+            <a href="javascript" class="tips-btn"><img src="../images/box_btn_1.png"></a>
+        </div><!--更好号码 end-->
+    </div>
+    </div>
+    
+    
+    <div class="hide" id="tips-box-con2">
+    	<div class="join-4g-tips">
+        	<a href="javascript:" class="icon-close pa" onClick="common.hideLayer()"><img src="../images/icon_close.png"></a>
+        	<img src="../images/hb_box_bg_3_s.png" class="join-4g-img">
+            <div class="join-text">
+            	<div class="join-text-con  lh-14">
+            	<p class="fem-12 lh-15"><img src="../images/icon_t_1.png"> 未开通4G套餐</p>
+                <p class="fem-12 red lh-15"><img src="../images/icon_t_2.png"> 已升级4G卡</p>
+                <p class="fem-12 red lh-15"><img src="../images/icon_t_2.png"> 已使用4G手机 </p>
+                <p class="f-color">想要领取4G专享大红包么？快去［开通4G套餐］</p>
+                <p class="white">以上为11月6日前的数据，数据每周更新。成为4G用
+户，下个月可获得4G专享大红包一个，详见活动规则。</p>
+</div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script src="../js/lib/jquery/jquery.js"></script>
+<script src="../js/lib/fastclick/fastclick.js"></script>
+<script src="../js/src/common/common.js"></script>
+<script>
+!function(){
+	$("#btnGet").click(function(){
+		common.showLayer("#tips-box-con",1,1,function(){
+			
+			$(".tipsBtnChange").click(function(){
+				$(".changeDiv_2").eq(1).css("display","block");	
+				$(".changeDiv_1").eq(1).css("display","none");
+			});
+			
+		},true)
+	});
+	//显示4G开通情况
+	function show4GKTstate(){
+		common.showLayer("#tips-box-con2",1,1,function(){
+		},true);
+	}
+}()
+</script>
+</html>

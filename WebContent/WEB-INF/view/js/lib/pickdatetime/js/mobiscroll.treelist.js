@@ -1,0 +1,1 @@
+!function($){var a=$.mobiscroll,b=a.presets.scroller;b.treelist=b.list,a.presetShort("list"),a.presetShort("treelist")}(jQuery);

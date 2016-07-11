@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <title>提示</title>
+    <link rel="stylesheet" href="../css/normalize.css"/>
+    <link rel="stylesheet" href="../css/main.css"/>
+</head>
+<body class="mb-body tips-body">
+<div class="page-main">
+    <div class="tips-page-wrap">
+        <div class="tips-main">
+            <p>你已成功为好友XXX扫码，</p>
+            <p>TA将增加一次获得1G流量的机会。</p>
+            <p>你也来参加吧。中奖概率超过80%哦！</p>
+        </div>
+        <div class="tips-main" style="display: none">
+            <p>要关注“珠海移动”官方微信</p>
+            <p>才能为好友扫码。关注绑定号码</p>
+            <p>可以获得1G流量。</p>
+        </div>
+        <!--返回链接-->
+        <a href="#" class="default-btn-link">
+            <div class="default-btn">我也要参加</div>
+        </a>
+        <div class="dial-img-wrap">
+            <a href="#">
+                <img src="../images/dial-img.jpg" alt=""/>
+            </a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

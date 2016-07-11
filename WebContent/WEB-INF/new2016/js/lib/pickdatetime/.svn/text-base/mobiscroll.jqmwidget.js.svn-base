@@ -1,0 +1,1 @@
+!function($){$.widget&&($.widget("mobile.jqmMobiscroll",$.mobile.widget,{options:{theme:"jqm",preset:"date",animate:"pop"},_create:function(){var a=this.element,b=$.extend(this.options,a.jqmData("options"));a.mobiscroll(b)}}),$(document).on("pagecreate",function(a){$(':jqmData(role="mobiscroll")',a.target).each(function(){$(this).jqmMobiscroll()})}))}(jQuery);

@@ -1,0 +1,1 @@
+!function($){$.mobiscroll.themes["ios-classic"]={display:"bottom",dateOrder:"MMdyy",rows:5,height:30,minWidth:60,headerText:!1,showLabel:!1,btnWidth:!1,selectedLineHeight:!0,selectedLineBorder:2,useShortLabels:!0}}(jQuery);

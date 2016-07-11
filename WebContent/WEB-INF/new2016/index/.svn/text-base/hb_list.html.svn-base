@@ -1,0 +1,198 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<title>周四红包</title>
+<link href="../css/reset.css" rel="stylesheet" type="text/css" />
+<link href="../css/common.css" rel="stylesheet" type="text/css" />
+<link href="../css/index.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="body-bg">
+    <div class="main">
+    	<div class="head-logo-img"><img src="../images/logo.png" class="logo-img"></div>
+        <div class="h1em"></div>
+          <!--广告位-->
+          
+          <div class="banner-wrap">
+          
+          <div class="swiper-container">
+                <div class="swiper-wrapper" id="swiper-wrapper">
+                    <div class="swiper-slide">
+                    	<div class="text-center">
+                        <div class="user-info">
+                            <img src="../images/user.png" class="user-img">
+                           <p class="fem-12">轻松到手<span class="fem-15">1.2</span>元话费</p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                    	<div class="banner pl-1em pr-1em"><img src="../images/temp.jpg"></div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+             </div>
+          		
+                
+          
+          </div>
+          
+        
+        <!--广告位end-->
+        <!--
+        <div class="h2em"></div>
+        <div class="text-center">
+        <div class="user-info">
+        	<img src="../images/user.png" class="user-img">
+           <p class="fem-12 white">轻松到手<span class="fem-15">1.2</span>元话费</p>
+        </div>
+        </div>
+        -->
+        <div class="h2em"></div>
+        <div><img src="../images/title_1.png"></div>
+        <div class="h1em"></div>
+        
+        <ul class="hb-items-list">
+        	<li>
+            	<img src="../images/item_bg.png">
+                <div class="left-icon">
+                	<img src="../images/hb_icon/icon_1.png">
+                </div>
+                <div class="hb-items-text">
+                	<img src="../images/hb_icon/text_1.png">
+                </div>
+                <div class="btn-wrap">
+                	<div class="btn-wrap-con text-center">
+                    	<span class="white fem-15">￥2.9</span>
+                        <span class="img"><img src="../images/btn_ylq.png" alt="已领取"></span>
+                    </div>
+                </div>
+            </li>
+            
+            
+            
+            
+            
+           <li>
+            	<img src="../images/item_bg.png">
+                <div class="left-icon">
+                	<img src="../images/hb_icon/icon_2.png">
+                </div>
+                <div class="hb-items-text">
+                	<img src="../images/hb_icon/text_2.png">
+                </div>
+                <div class="btn-wrap">
+                	<div class="btn-wrap-con text-center">
+                        <span class="img"><img src="../images/btn_djsy.png" alt="点击使用"></span>
+                    </div>
+                </div>
+           </li>
+           
+        </ul>
+        <div class="icon-s-jt"><img src="../images/icon_jt_2.png"></div>
+        <div class="h1em"></div>
+         <div><img src="../images/title_2.png"></div>
+        <div class="h1em"></div>
+          <ul class="hb-items-list">
+        	<li>
+                <img src="../images/item_bg.png">
+                <div class="left-icon">
+                	<img src="../images/hb_icon/icon_3.png">
+                </div>
+                <div class="hb-items-text">
+                	<img src="../images/hb_icon/text_3.png">
+                </div>
+                <div class="btn-wrap">
+                	<div class="btn-wrap-con text-center">
+                    	<span class="white fem-15">￥2 +</span>
+                        <span class="img"><img src="../images/btn_djlq.png" alt="点击领取"></span>
+                    </div>
+                </div>
+            </li>
+           <li>
+            	<img src="../images/item_bg.png">
+                <div class="left-icon">
+                	<img src="../images/hb_icon/icon_4.png">
+                </div>
+                <div class="hb-items-text">
+                	<img src="../images/hb_icon/text_4.png">
+                </div>
+                <div class="btn-wrap">
+                	<div class="btn-wrap-con text-center">
+                        <span class="img"><img src="../images/btn_djbl.png" alt="点击办理"></span>
+                    </div>
+                </div>
+           </li>
+           <li>
+            	<img src="../images/item_bg.png">
+                <div class="left-icon">
+                	<img src="../images/hb_icon/icon_5.png">
+                </div>
+                <div class="hb-items-text">
+                	<img src="../images/hb_icon/text_5.png">
+                </div>
+                <div class="btn-wrap">
+                	<div class="btn-wrap-con text-center">
+                        <span class="img"><img src="../images/btn_djbl.png" alt="点击办理"></span>
+                    </div>
+                </div>
+           </li>
+        </ul>
+        
+         <div class="pl-1em pr-1em white clearfix text-center">
+            <div><a href="javascript:" onClick="common.toggleDiv('#active-con');common.toggleClass($(this).parent().next().children(),'active')" class="white text-unline">活动规则</a></div>
+            <div><div class="inline-block  icon-jt2 pr  bg-cover-after">&nbsp;&nbsp;</div> </div>
+         </div>
+         <div class="h1em"></div>
+        <div class="active-gz white lh-15 pd1em" style="padding-top:0; display:none" id="active-con">
+         	1.本活动仅限珠海移动用户参与<br>
+            2.本活动仅限珠海移动用户参与本活动仅限珠海移动用户参与，本活动仅限珠海移动用户参与本活动仅限珠海移动用户参与。<br>
+			3.本活动仅限珠海移动用户参与本活动仅限珠海移动用户参与本活动仅限珠海移动用户参与！。
+         </div>
+    </div>
+    
+    
+    <div class="hide" id="tips-box-con">
+    <div class="tips-box">
+    	<div class="t1 fem-13">请问要兑换至哪个号码呢？</div>
+        <div class="h1em"></div>
+        <div class="table">
+        	<div class="table-cell" style="width:4em">手机号码</div>
+            <div class="table-cell"><input type="text" class="i_text"></div>
+        </div>
+        <div class="h05em"></div>
+        <div class="table">
+        	<div class="table-cell" style="width:4em">验证码</div>
+            <div class="table-cell"><input type="text" class="i_text"></div>
+            <div class="table-cell"><a href="javascript:" class="get-code">获取</a></div>
+        </div>
+        <div class="h1em"></div>
+        <a href="javascript" class="tips-btn"><img src="../images/box_btn_1.png"></a>
+    </div>
+    </div>
+    
+    
+</body>
+<script src="../js/lib/jquery/jquery.js"></script>
+<script src="../js/lib/fastclick/fastclick.js"></script>
+<script src="../js/src/common/common.js"></script>
+<!--swiper-->
+<link rel="stylesheet" href="../js/lib/swiper/css/swiper.min.css">
+<script type="text/javascript" src="../js/lib/swiper/js/swiper.min.js"></script>
+<!--swiper end-->
+
+<script>
+var swiper = new Swiper('.swiper-container', {
+                pagination: '.swiper-pagination',
+                paginationClickable: true,
+				autoplay:3000,
+				loop:true
+});
+			
+/*
+	common.showLayer("#tips-box-con",1,1,function(){
+	},true)*/
+</script>
+</html>

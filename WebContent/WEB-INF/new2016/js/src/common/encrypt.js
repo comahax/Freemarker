@@ -1,0 +1,1 @@
+function encrypt(a,b){for(var c="",d=0,e=0;e<a.length;e++)c+=String.fromCharCode(a.charCodeAt(e)^b.charCodeAt(d)),++d==b.length&&(d=0);var f=$.base64.encode(c);return f}function decrypt(a,b){for(var c=$.base64.decode(a),d="",e=0,f=0;f<c.length;f++)d+=String.fromCharCode(c.charCodeAt(f)^b.charCodeAt(e)),++e==b.length&&(e=0);return d}

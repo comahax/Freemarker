@@ -1,0 +1,35 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<title>活动未开始</title>
+<link href="../css/reset.css" rel="stylesheet" type="text/css" />
+<link href="../css/common.css" rel="stylesheet" type="text/css" />
+<link href="../css/index.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="body-bg">
+    <div class="main">
+    	<div class="head-logo-img"><img src="../images/logo.png" class="logo-img"></div>
+        <div class="title-img"><img src="../images/title.png"></div>
+        <div class="index-img"><img src="../images/end_active_img.png"></div>
+        <div class="h1em"></div>
+        <!--广告位
+        <div class="banner pl-1em pr-1em"><img src="../images/temp.jpg"></div>
+        <!--广告位end-->
+      
+        <p class="text-center white lh-15">
+移动4G两周年，感恩大回馈<br>
+<span class="yellow">送</span>流量&nbsp;&nbsp;<span class="yellow">送</span>话费&nbsp;&nbsp;<span class="yellow">送</span>光宽带<br>
+
+        </p>
+         <div class="h1em"></div>
+         
+    </div>
+</body>
+<script src="../js/lib/jquery/jquery.js"></script>
+<script src="../js/lib/fastclick/fastclick.js"></script>
+<script src="../js/src/common/common.js"></script>
+</html>
